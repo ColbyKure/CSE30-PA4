@@ -1,0 +1,72 @@
+/*
+ * Filename: README
+ * Author: Colby Kure
+ * Userid: cs30xdc
+ * Date: 6/2/18
+ * Sources of help: lecture and discussion notes
+ */
+
+-------------------------------------------------------------------------------
+Description:
+This program has two parts the first part, create, takes in at least 2 arguments
+which are all used to create and populate the 3 tables. Then the program will
+serialize the data onto a binary file, which is then used as the input to the
+second part of the program, which deserializes the table and engages the user in
+interative mode where the user may look up information about spam emails. 
+-------------------------------------------------------------------------------
+How to compile:
+Navigate to directory with the files for pa4. Then execute the make 
+command and the Makefile in pa3 will run and will compile and link
+all the required files, compiling create and search seperately
+-------------------------------------------------------------------------------
+How to run:
+./ followed by the name of the execuatable
+Just type ./create or ./search followed by the correct arguments depending on
+which program you want to run 
+
+	./create -i [filename] -o [filename] [-s [size] -h]
+	./search -i [filename] [-x [size] -h]
+-------------------------------------------------------------------------------
+Normal output for create:
+	./create -i emails/emails_100 -o write.txt -s 500
+-----------------------------------------------------------------------------
+Normal output for search:
+	./search -i write.txt
+Enter a word: horizontal@hack.co
+horizontal@hack.co is SPAM!
+Enter a word: asdf
+asdf is SPAM!
+-----------------------------------------------------------------------------
+Abnormal output for search:
+	./search -i asdf
+Error opening table file for reading: No such file or directory
+
+Usage: ./search -i inFile [-x] [-h]
+
+-------------------------------------------------------------------------------r
+Abnormal output for create:
+	./create -i asdf
+Error opening input filter file: No such file or directory
+
+Usage: ./create -i dataFile -o outFile [-s size] [-h]
+
+--------------------------------------------------------------------------------
+Testing:
+For testing the create portion I diffed the files for various table sizes and
+used all of the given files in the emails/ directory to make sure that my
+program worked for all sizes. Once I was done and satisfied with the create
+portion I moved on to the search portion and did the smae things there. However,
+I also had to test the error outputs for both so I tried to get the tester to
+output as many of the errors that I could and compared the testers output to my
+output. 
+-------------------------------------------------------------------------------
+Question 1:
+I would just remind him or her of the consequences of breaking integrity and to
+just try more next time and get help.
+-------------------------------------------------------------------------------
+Question 2:
+tab
+-------------------------------------------------------------------------------
+Question 3:
+:colorscheme desert
+-------------------------------------------------------------------------------
